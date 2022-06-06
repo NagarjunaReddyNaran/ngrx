@@ -3,8 +3,8 @@
 
 
 <mat-toolbar color="primary">Assignment</mat-toolbar>
-<div class="mat-elevation-z8 mt-100">
-  <table mat-table [dataSource]="dataSource">
+<div class="mat-elevation-z8 mt-100 table-container">
+  <table class="a-table" mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
     <ng-container matColumnDef="id">
@@ -34,7 +34,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[10, 20, 30, 40, 50]" showFirstLastButtons></mat-paginator>
 </div>
 
 
