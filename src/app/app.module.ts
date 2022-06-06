@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from  '@angular/common/http';
 import { ProductEffects } from './state/product.effects';
 import { productReducer } from './state/product.reducer';
+import {MaterialExampleModule} from '../material.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { productReducer } from './state/product.reducer';
     AppRoutingModule,
     HttpClientModule,
     // StoreModule.forRoot({}, {}),
-    StoreModule.forRoot(productReducer, {}),
+    StoreModule.forRoot({products:productReducer}),
     // StoreModule.forFeature('products', productReducer),
     BrowserAnimationsModule,
+    MaterialExampleModule,
     EffectsModule.forRoot([ProductEffects])
   ],
   providers: [],

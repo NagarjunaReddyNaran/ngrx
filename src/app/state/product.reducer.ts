@@ -17,8 +17,6 @@ export interface ProductState {
   export const productReducer = createReducer<ProductState>(
     initialState,
     on(ProductAction.loadProductsSuccess, (state, action): ProductState => {
-        console.log('state:::::',state)
-        console.log('action:::::',action)
       return {
         ...state,
         products: action.products,
